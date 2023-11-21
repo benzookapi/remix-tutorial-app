@@ -29,6 +29,7 @@ export const links: LinksFunction = () => [
 export const loader = async ({
   request,
 }: LoaderFunctionArgs) => {
+  console.log(`=== THIS IS LOADER IN SERVER SIDE!!! ===`);
   const url = new URL(request.url);
   const q = url.searchParams.get("q");
   const contacts = await getContacts(q);
@@ -51,6 +52,8 @@ export default function App() {
       searchField.value = q || "";
     }
   }, [q]);
+
+  console.log(`+++ THIS IS COMPOMENT IN SERVER AND CLIENT SIDE BOTH!!! +++`);
 
   return (
     <html lang="en">
@@ -144,5 +147,6 @@ export default function App() {
 
 export const action = async () => {
   const contact = await createEmptyContact();
+  console.log(`=== THIS IS ACTION IN SERVER SIDE!!! ===`);
   return json({ contact });
 };
