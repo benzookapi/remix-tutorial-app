@@ -37,6 +37,6 @@ Make sure to deploy the output of `remix build`
 - `build/`
 - `public/build/`
 
-## === added by @benzookapi ===
+## === Added for better understanding of how Remix work on client (browser) / server sides ===
 
-Check [Wiki](https://github.com/benzookapi/remix-tutorial-app/wiki) to see how it works using `console.log()` in server and client side. 
+Check [Wiki](../../wiki) to see how it works using `console.log()` in server and client side. 
